@@ -20,7 +20,10 @@ const Keyboard = ({ setDisplay }) => {
               return (
                 <button
                   key={key}
-                  className={'anotherClassForKey ' + styles.key}
+                  id={'key' + key.toUpperCase()}
+                  className={`${styles.key} ${
+                    styles['key' + key.toUpperCase()]
+                  } key${key.toUpperCase()}`}
                   onClick={onClick}
                 >
                   {key}
