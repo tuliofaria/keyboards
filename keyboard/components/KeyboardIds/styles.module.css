@@ -1,0 +1,21 @@
+.key {
+  padding: 1.5em;
+  width: 4em;
+  border: none;
+  margin: 0.2em;
+}
+.keyF,
+.keyJ {
+  font-weight: bold;
+  background-color: aliceblue;
+  text-decoration: underline;
+}
+.key:hover,
+.keyClear:hover {
+  background-color: aliceblue;
+}
+.keyClear {
+  padding: 1.5em;
+  border: none;
+  margin: 0.2em;
+}

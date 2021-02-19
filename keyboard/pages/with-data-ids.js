@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import Keyboard from '../components/Keyboard'
-import Display from '../components/Display'
+import Keyboard from '../components/KeyboardIds'
+import Display from '../components/DisplayIds'
 import { useFormik } from 'formik'
 
 const Index = () => {
@@ -24,13 +24,20 @@ const Index = () => {
       <Keyboard setDisplay={setDisplay} />
       <h3>Type something:</h3>
       <form onSubmit={form.handleSubmit}>
-        <input type='text' name='name' onChange={form.handleChange} />
-        <button type='submit'>say hi!</button>
-        <button type='reset' onClick={reset}>
+        <input
+          type='text'
+          name='name'
+          onChange={form.handleChange}
+          data-testid='name'
+        />
+        <button type='submit' data-testid='say-hi'>
+          say hi!
+        </button>
+        <button type='reset' onClick={reset} data-testid='reset'>
           Clear
         </button>
       </form>
-      {name && <p>Hi {name}!</p>}
+      {name && <p data-testid='hi-display'>Hi {name}!</p>}
     </>
   )
 }
