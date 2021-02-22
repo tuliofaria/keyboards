@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-context('Actions', () => {
+describe('Actions', () => {
   beforeEach(() => {
     cy.visit('/with-data-ids')
   })
